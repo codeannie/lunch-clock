@@ -1,16 +1,19 @@
 {
   "name": "lunch-clock",
   "version": "1.0.0",
-  "description": "",
+  "description": "calculate exact minute to clock back in from lunch",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
+    "bundle": "webpack --progress --colors --watch",
+    "dev": "npm-run-all --parallel bundle",
     "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/codeannie/lunch-clock.git"
   },
-  "author": "",
+  "author": "Annie Chiang",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/codeannie/lunch-clock/issues"
