@@ -1,5 +1,6 @@
 'use strict';
-
+import { MDCSelect } from '@material/select';
+// const MDCSelect = require('@material/select');
 const format = require('date-fns/format');
 
 // DATE
@@ -19,3 +20,8 @@ function showTime() {
 showDate();
 setInterval(showTime, 1000);
 
+// TIME PICKER
+const select = new MDCSelect(document.querySelector('.mdc-select'));
+select.listen('change', () => {
+  alert(`Selected option at index ${select.selectedIndex} with value "${select.value}"`);
+});
