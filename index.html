@@ -8,6 +8,7 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <link rel="stylesheet" href="bundle.css">
   </head>
 
@@ -37,22 +38,95 @@
         <h2> What time did you clock out?</h2>
 
         <div class="mdc-select">
-          <select class="mdc-select__native-control">
+          <select class="mdc-select--outlined">
             <option value disabled selected></option>
-            <option value='01'>01</option>
-            <option value='02'>02</option>
-            <option value='03'>03</option>
-            <option value='04'>04</option>
-            <option value='05'>05</option>
-            <option value='06'>06</option>
-            <option value='07'>07</option>
-            <option value='08'>08</option>
-            <option value='09'>09</option>
-            <option value='10'>10</option>
-            <option value='11'>11</option>
-            <option value='12'>12</option>
-            </option>
+            <option value='hr'>01</option>
+            <option value='hr'>02</option>
+            <option value='hr'>03</option>
+            <option value='hr'>04</option>
+            <option value='hr'>05</option>
+            <option value='hr'>06</option>
+            <option value='hr'>07</option>
+            <option value='hr'>08</option>
+            <option value='hr'>09</option>
+            <option value='hr'>10</option>
+            <option value='hr'>11</option>
+            <option value='hr'>12</option>
             <label class="mdc-floating-label">HOUR</label>
+            <div class="mdc-line-ripple"></div>
+          </select>
+
+          <select class="mdc-select--outlined">
+            <option value disabled selected></option>
+            <option value='min'>00</option>
+            <option value='min'>01</option>
+            <option value='min'>02</option>
+            <option value='min'>03</option>
+            <option value='min'>04</option>
+            <option value='min'>05</option>
+            <option value='min'>06</option>
+            <option value='min'>07</option>
+            <option value='min'>08</option>
+            <option value='min'>09</option>
+            <option value='min'>10</option>
+            <option value='min'>11</option>
+            <option value='min'>12</option>
+            <option value='min'>13</option>
+            <option value='min'>14</option>
+            <option value='min'>15</option>
+            <option value='min'>16</option>
+            <option value='min'>17</option>
+            <option value='min'>18</option>
+            <option value='min'>19</option>
+            <option value='min'>20</option>
+            <option value='min'>21</option>
+            <option value='min'>22</option>
+            <option value='min'>23</option>
+            <option value='min'>24</option>
+            <option value='min'>25</option>
+            <option value='min'>26</option>
+            <option value='min'>27</option>
+            <option value='min'>28</option>
+            <option value='min'>29</option>
+            <option value='min'>30</option>
+            <option value='min'>31</option>
+            <option value='min'>32</option>
+            <option value='min'>33</option>
+            <option value='min'>34</option>
+            <option value='min'>35</option>
+            <option value='min'>36</option>
+            <option value='min'>37</option>
+            <option value='min'>38</option>
+            <option value='min'>39</option>
+            <option value='min'>40</option>
+            <option value='min'>41</option>
+            <option value='min'>42</option>
+            <option value='min'>43</option>
+            <option value='min'>44</option>
+            <option value='min'>45</option>
+            <option value='min'>46</option>
+            <option value='min'>47</option>
+            <option value='min'>48</option>
+            <option value='min'>49</option>
+            <option value='min'>50</option>
+            <option value='min'>51</option>
+            <option value='min'>52</option>
+            <option value='min'>53</option>
+            <option value='min'>54</option>
+            <option value='min'>55</option>
+            <option value='min'>56</option>
+            <option value='min'>57</option>
+            <option value='min'>58</option>
+            <option value='min'>59</option>
+            <label class="mdc-floating-label">MINUTE</label>
+            <div class="mdc-line-ripple"></div>
+          </select>
+
+          <select class="mdc-select--outlined">
+            <option value disabled selected></option>
+            <option value='am_pm'>AM</option>
+            <option value='am_pm'>PM</option>
+            <label class="mdc-floating-label">AM/PM</label>
             <div class="mdc-line-ripple"></div>
           </select>
         </div>
@@ -67,7 +141,8 @@
         <p> Created by A. Chiang 2018 </p>
       </footer>
     </main>
-    <script src="bundle.js" async></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="bundle.js" async></script>
   </body>
 </html>
