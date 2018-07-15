@@ -33,5 +33,9 @@
     "sass-loader": "^7.0.3",
     "webpack": "^3.12.0",
     "webpack-dev-server": "^2.11.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-config-equimper": "^2.2.2"
   }
 }
