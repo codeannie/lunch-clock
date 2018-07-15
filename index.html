@@ -38,28 +38,32 @@
         <h2> What time did you clock out?</h2>
 
         <div class="mdc-select">
-          <select class="mdc-select--outlined">
-            <option value disabled selected></option>
-            <option value='hr'>01</option>
-            <option value='hr'>02</option>
-            <option value='hr'>03</option>
-            <option value='hr'>04</option>
-            <option value='hr'>05</option>
-            <option value='hr'>06</option>
-            <option value='hr'>07</option>
-            <option value='hr'>08</option>
-            <option value='hr'>09</option>
-            <option value='hr'>10</option>
-            <option value='hr'>11</option>
-            <option value='hr'>12</option>
-            <label class="mdc-floating-label">HOUR</label>
-            <div class="mdc-line-ripple"></div>
+          <select class="mdc-select__native-control">
+            <option value='' disabled selected></option>
+            <option value='01'>01</option>
+            <option value='02'>02</option>
+            <option value='03'>03</option>
+            <option value='04'>04</option>
+            <option value='05'>05</option>
+            <option value='06'>06</option>
+            <option value='07'>07</option>
+            <option value='08'>08</option>
+            <option value='09'>09</option>
+            <option value='10'>10</option>
+            <option value='11'>11</option>
+            <option value='12'>12</option>
+            <label class="mdc-floating-label dc-floating-label--float-above">HOUR</label>
+            <!-- <div class="mdc-notched-outline mdc-notched-outline--notched">
+              <svg>
+                <path class="mdc-notched-outline__path"></path>
+              </svg>
+            </div> -->
           </select>
-
-          <select class="mdc-select--outlined">
+          
+          <!-- <select class="mdc-select__native-control">
             <option value disabled selected></option>
-            <option value='min'>00</option>
-            <option value='min'>01</option>
+            <option value='00'>00</option>
+            <option value='01'>01</option>
             <option value='min'>02</option>
             <option value='min'>03</option>
             <option value='min'>04</option>
@@ -120,12 +124,12 @@
             <option value='min'>59</option>
             <label class="mdc-floating-label">MINUTE</label>
             <div class="mdc-line-ripple"></div>
-          </select>
+          </select>  -->
 
-          <select class="mdc-select--outlined">
-            <option value disabled selected></option>
-            <option value='am_pm'>AM</option>
-            <option value='am_pm'>PM</option>
+          <select class="mdc-select__native-control">
+            <option value='' disabled selected></option>
+            <option value='AM'>AM</option>
+            <option value='PM'>PM</option>
             <label class="mdc-floating-label">AM/PM</label>
             <div class="mdc-line-ripple"></div>
           </select>
