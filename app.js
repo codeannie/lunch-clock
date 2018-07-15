@@ -1,5 +1,7 @@
 'use strict';
-const format = require('date-fns/format');
+
+import format from 'date-fns/format';
+import { showDate, showTime } from './current-dateTime';
 
 const STATE = {
   breakLength: '',
@@ -7,25 +9,12 @@ const STATE = {
   timeIn:'',
 };
 
-// BUTTON RIPPLE EFFECT
-const buttonRipple = new mdc.ripple.MDCRipple(document.querySelector('.mdc-button'));
-
-// DATE
-function showDate() {
-  const todayDate = format(new Date(), 'ddd, MMM DD, YYYY');
-
-  $('#date').html(todayDate);
-}
-
-// CLOCK
-function showTime() {
-  const currentTime = format(new Date(), 'hh:mm:ss A');
-
-  $('#clock').html(currentTime);
-}
-
+// DISPLAY CURRENT DATE & TIME
 showDate();
 setInterval(showTime, 1000);
+
+// BUTTON RIPPLE EFFECT
+const buttonRipple = new mdc.ripple.MDCRipple(document.querySelector('.mdc-button'));
 
 // TIME PICKER
 const select = new mdc.select.MDCSelect(document.querySelector('.mdc-select'));
