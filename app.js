@@ -1,7 +1,6 @@
 'use strict';
 
-import format from 'date-fns/format';
-import { showDate, showTime } from './current-dateTime';
+import { getTodaysDate, getCurrentTime } from './current-dateTime';
 
 const STATE = {
   breakLength: '',
@@ -9,9 +8,10 @@ const STATE = {
   timeIn:'',
 };
 
+
 // DISPLAY CURRENT DATE & TIME
-showDate();
-setInterval(showTime, 1000);
+getTodaysDate();
+setInterval(getCurrentTime, 1000);
 
 // BUTTON RIPPLE EFFECT
 const buttonRipple = new mdc.ripple.MDCRipple(document.querySelector('.mdc-button'));
