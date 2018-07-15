@@ -7,6 +7,9 @@ const STATE = {
   timeIn:'',
 };
 
+// BUTTON RIPPLE EFFECT
+const buttonRipple = new mdc.ripple.MDCRipple(document.querySelector('.mdc-button'));
+
 // DATE
 function showDate() {
   const todayDate = format(new Date(), 'ddd, MMM DD, YYYY');
