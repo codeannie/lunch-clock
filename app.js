@@ -2,7 +2,7 @@
 import { MDCSelect } from '@material/select';
 import { MDCFloatingLabel } from '@material/floating-label';
 import { MDCRipple } from '@material/ripple';
-import { getTodaysDate, getCurrentTime } from './current-dateTime';
+import { getTodaysDate, getCurrentTime } from './client/current-dateTime';
 
 
 const STATE = {
