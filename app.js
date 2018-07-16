@@ -1,13 +1,15 @@
 'use strict';
-
+import { MDCSelect } from '@material/select';
+import { MDCFloatingLabel } from '@material/floating-label';
+import { MDCRipple } from '@material/ripple';
 import { getTodaysDate, getCurrentTime } from './current-dateTime';
+
 
 const STATE = {
   breakLength: '',
   timeOut: '',
   timeIn:'',
 };
-
 
 // DISPLAY CURRENT DATE & TIME
 getTodaysDate();
@@ -20,26 +22,27 @@ $('mdc-button').on('click', (min) => {
   console.log('break length? ->', STATE.breakLength);
 })
 
+// INSTANTIATE FOR MATERIAL COMPONENTS 
 // BUTTON RIPPLE EFFECT
-const buttonRipple = new mdc.ripple.MDCRipple(document.querySelector('.mdc-button'));
+const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
 
 // FLOATING LABEL EFFECT
-const floatingLabel = new mdc.floatingLabel.MDCFloatingLabel(document.querySelector('.mdc-floating-label'));
+const floatingLabel = new MDCFloatingLabel(document.querySelector('.mdc-floating-label'));
 
 // SELECT HOUR
-const selectHour = new mdc.select.MDCSelect(document.querySelector('.select-hour'));
+const selectHour = new MDCSelect(document.querySelector('.select-hour'));
 selectHour.listen('change', () => {
   console.log(`Selected option at index ${selectHour.selectedIndex} with value "${selectHour.value}"`);
 });
 
 // SELECT MINUTE
-const selectMinute = new mdc.select.MDCSelect(document.querySelector('.select-minute'));
+const selectMinute = new MDCSelect(document.querySelector('.select-minute'));
 selectMinute.listen('change', () => {
   console.log(`Selected option at index ${selectMinute.selectedIndex} with value "${selectMinute.value}"`);
 });
 
 // SELECT PERIOD (AM/PM)
-const selectAmPm = new mdc.select.MDCSelect(document.querySelector('.select-period'));
+const selectAmPm = new MDCSelect(document.querySelector('.select-period'));
 selectAmPm.listen('change', () => {
   console.log(`Selected option at index ${selectAmPm.selectedIndex} with value "${selectAmPm.value}"`);
 });

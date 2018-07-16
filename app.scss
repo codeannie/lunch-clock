@@ -1,5 +1,10 @@
+@import "@material/select/mdc-select";
+@import "@material/textfield/mdc-text-field";
+@import "@material/button/mdc-button";
+@import "@material/floating-label/mdc-floating-label";
+
 body {
-  color: light grey;
+  background-color: #eeeeee;
 }
 
 #clock {
