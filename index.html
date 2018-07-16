@@ -25,15 +25,6 @@
         <div id="clock"></div>
       </section>
 
-      <section class="break-length">
-        <h2> How long is lunch? </h2>
-        <div class="button-container">
-          <button class="mdc-button" value="30"> 30 mins </button>
-          <button class="mdc-button" value="45"> 45 mins </button>
-          <button class="mdc-button" value="60"> 60 mins </button>
-        </div>
-      </section>
-
       <section class="time-out">
         <h2> What time did you clock out?</h2>
 
@@ -134,6 +125,15 @@
           <label class="mdc-floating-label mdc-floating-label--float-above">AM/PM</label>
           <div class="mdc-line-ripple"></div>
         </div>
+      </section>
+
+      <section class="break-length">
+          <h2> How long is lunch? </h2>
+          <div class="button-container">
+            <button class="mdc-button mdc-button--outlined" value="30"> 30 mins </button>
+            <button class="mdc-button mdc-button--outlined" data-min="45"> 45 mins </button>
+            <button class="mdc-button mdc-button--outlined" data-min="60"> 60 mins </button>
+          </div>
       </section>
 
       <section class="in-time">
