@@ -7,6 +7,9 @@ import { getTodaysDate, getCurrentTime } from './client/current-dateTime';
 
 const STATE = {
   breakLength: '',
+  hour: '',
+  minute: '',
+  period: '',
   timeOut: '',
   timeIn:'',
 };
@@ -32,29 +35,35 @@ const floatingLabel = new MDCFloatingLabel(document.querySelector('.mdc-floating
 // SELECT HOUR
 const selectHour = new MDCSelect(document.querySelector('.select-hour'));
 selectHour.listen('change', () => {
+  STATE.hour = `${selectHour.value}`;
+  console.log('STATE - hour:', STATE.hour);
   console.log(`Selected option at index ${selectHour.selectedIndex} with value "${selectHour.value}"`);
 });
 
 // SELECT MINUTE
 const selectMinute = new MDCSelect(document.querySelector('.select-minute'));
 selectMinute.listen('change', () => {
+  STATE.minute = `${selectMinute.value}`;
+  console.log('STATE - minute:', STATE.minute);
   console.log(`Selected option at index ${selectMinute.selectedIndex} with value "${selectMinute.value}"`);
 });
 
 // SELECT PERIOD (AM/PM)
 const selectAmPm = new MDCSelect(document.querySelector('.select-period'));
 selectAmPm.listen('change', () => {
+  STATE.period = `${selectAmPm.value}`;
+  console.log('STATE - period:', STATE.period);
   console.log(`Selected option at index ${selectAmPm.selectedIndex} with value "${selectAmPm.value}"`);
 });
 
 // convert time out input w date fns
-/* function getOutTime() {
-  const hourOut = $('.hr').value;
-  const minOut = $('.min').value;
-  const amOrPm = $('.am_pm').value;
-
-  const timeOut = hourOut + ':' + minOut + amOrPm;
-  console.log('out time', timeOut);
-} */
+// function getOutTime() {
+//   const hourOut = selectHours.listen('change', () => selectHour.value);
+//   const minOut = selectMinute.value;
+//   const period = selectAmPm.value;
+//   const timeOut = hourOut + ':' + minOut + period;
+//   console.log('out time', timeOut);
+// };
+// getOutTime();
 
 // add break length to time out time 
