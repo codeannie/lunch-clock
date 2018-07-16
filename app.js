@@ -13,13 +13,35 @@ const STATE = {
 getTodaysDate();
 setInterval(getCurrentTime, 1000);
 
+// BUTTON - save minutes;
+$('mdc-button').on('click', (min) => {
+  alert('break button clicked');
+  STATE.breakLength = min.value;
+  console.log('break length? ->', STATE.breakLength);
+})
+
 // BUTTON RIPPLE EFFECT
 const buttonRipple = new mdc.ripple.MDCRipple(document.querySelector('.mdc-button'));
 
-// TIME PICKER
-const select = new mdc.select.MDCSelect(document.querySelector('.mdc-select'));
-select.listen('change', () => {
-  console.log(`Selected option at index ${select.selectedIndex} with value "${select.value}"`);
+// FLOATING LABEL EFFECT
+const floatingLabel = new mdc.floatingLabel.MDCFloatingLabel(document.querySelector('.mdc-floating-label'));
+
+// SELECT HOUR
+const selectHour = new mdc.select.MDCSelect(document.querySelector('.select-hour'));
+selectHour.listen('change', () => {
+  console.log(`Selected option at index ${selectHour.selectedIndex} with value "${selectHour.value}"`);
+});
+
+// SELECT MINUTE
+const selectMinute = new mdc.select.MDCSelect(document.querySelector('.select-minute'));
+selectMinute.listen('change', () => {
+  console.log(`Selected option at index ${selectMinute.selectedIndex} with value "${selectMinute.value}"`);
+});
+
+// SELECT PERIOD (AM/PM)
+const selectAmPm = new mdc.select.MDCSelect(document.querySelector('.select-period'));
+selectAmPm.listen('change', () => {
+  console.log(`Selected option at index ${selectAmPm.selectedIndex} with value "${selectAmPm.value}"`);
 });
 
 // convert time out input w date fns

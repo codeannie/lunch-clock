@@ -28,16 +28,16 @@
       <section class="break-length">
         <h2> How long is lunch? </h2>
         <div class="button-container">
-          <button class="mdc-button"> 30 mins </button>
-          <button class="mdc-button"> 45 mins </button>
-          <button class="mdc-button"> 60 mins </button>
+          <button class="mdc-button" value="30"> 30 mins </button>
+          <button class="mdc-button" value="45"> 45 mins </button>
+          <button class="mdc-button" value="60"> 60 mins </button>
         </div>
       </section>
 
       <section class="time-out">
         <h2> What time did you clock out?</h2>
 
-        <div class="mdc-select">
+        <div class="mdc-select select-hour">
           <select class="mdc-select__native-control">
             <option value='' disabled selected></option>
             <option value='01'>01</option>
@@ -52,15 +52,17 @@
             <option value='10'>10</option>
             <option value='11'>11</option>
             <option value='12'>12</option>
-            <label class="mdc-floating-label dc-floating-label--float-above">HOUR</label>
-            <!-- <div class="mdc-notched-outline mdc-notched-outline--notched">
+          </select>
+          <label class="mdc-floating-label mdc-floating-label--float-above">HOUR</label>
+          <!-- <div class="mdc-notched-outline mdc-notched-outline--notched">
               <svg>
                 <path class="mdc-notched-outline__path"></path>
               </svg>
             </div> -->
-          </select>
-          
-          <!-- <select class="mdc-select__native-control">
+        </div>
+        
+        <div class="mdc-select select-minute">
+          <select class="mdc-select__native-control">
             <option value disabled selected></option>
             <option value='00'>00</option>
             <option value='01'>01</option>
@@ -122,17 +124,19 @@
             <option value='min'>57</option>
             <option value='min'>58</option>
             <option value='min'>59</option>
-            <label class="mdc-floating-label">MINUTE</label>
-            <div class="mdc-line-ripple"></div>
-          </select>  -->
+          </select> 
+          <label class="mdc-floating-label mdc-floating-label--float-above">MINUTE</label>
+          <div class="mdc-line-ripple"></div>
+        </div>
 
+        <div class="mdc-select mdc-select---outlined select-period">
           <select class="mdc-select__native-control">
             <option value='' disabled selected></option>
             <option value='AM'>AM</option>
             <option value='PM'>PM</option>
-            <label class="mdc-floating-label">AM/PM</label>
-            <div class="mdc-line-ripple"></div>
           </select>
+          <label class="mdc-floating-label mdc-floating-label--float-above">AM/PM</label>
+          <div class="mdc-line-ripple"></div>
         </div>
       </section>
 
