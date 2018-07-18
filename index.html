@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>Lunch Clock</title>
-    <meta charset="UTF-8">
-    <meta description="">
-    <meta name="viewport" content="width=device-width", initial-scale="1">
-    
-    <link type="text/css" href="normalize.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"> -->
-    <link rel="stylesheet" href="bundle.css">
-  </head>
 
-  <body>
-    <main>
-      <h1> Lunch Clock </h1>
-      <section class="intro">
-        <p>Calculate what time to clock back in from lunch on the dot!</p>
-        <p> <span class="bold"> Instructions: </span> Select length of lunch break & enter time clocked out</p>
-      </section>
+<head>
+  <title>Lunch Clock</title>
+  <meta charset="UTF-8">
+  <meta description="">
+  <meta name="viewport" content="width=device-width" , initial-scale="1">
 
-      <section class="date_time-container">
-        <div id="date"></div>
-        <div id="clock"></div>
-      </section>
+  <link type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"> -->
+  <link rel="stylesheet" href="bundle.css">
+</head>
 
-      <section class="time-out">
-        <h2> What time did you clock out?</h2>
-        <input class=flatpickr type="text" placeholder="enter time out" data-id="timePicker">
-        <!-- <div id="time-picker"></div> -->
-        
-        <!-- <div class="mdc-select select-hour">
+<body>
+  <main>
+    <h1> Lunch Clock </h1>
+    <section class="intro">
+      <p>Calculate what time to clock back in from lunch on the dot!</p>
+      <p>
+        <span class="bold"> Instructions: </span> Select length of lunch break & enter time clocked out</p>
+    </section>
+
+    <section class="date_time-container">
+      <div id="date"></div>
+      <div id="clock"></div>
+    </section>
+
+    <section class="time-out">
+      <h2> What time did you clock out?</h2>
+      <input id="flatpickr" type="text" placeholder="click to enter time out" data-id="timePicker">
+      <!-- <div id="flatpickr"></div> -->
+
+      <!-- <div class="mdc-select select-hour">
           <select class="mdc-select__native-control">
             <option value='' disabled selected></option>
             <option value='01'>01</option>
@@ -127,28 +130,29 @@
           <label class="mdc-floating-label mdc-floating-label--float-above">AM/PM</label>
           <div class="mdc-line-ripple"></div>
         </div> -->
-      </section>
+    </section>
 
-      <section class="break-length">
-          <h2> How long is lunch? </h2>
-          <div class="button-container">
-            <button class="mdc-button mdc-button--outlined" value="30"> 30 mins </button>
-            <button class="mdc-button mdc-button--outlined" data-min="45"> 45 mins </button>
-            <button class="mdc-button mdc-button--outlined" data-min="60"> 60 mins </button>
-          </div>
-      </section>
+    <section class="break-length">
+      <h2> How long is lunch? </h2>
+      <div class="button-container">
+        <button class="mdc-button mdc-button--outlined" value="30"> 30 mins </button>
+        <button class="mdc-button mdc-button--outlined" data-min="45"> 45 mins </button>
+        <button class="mdc-button mdc-button--outlined" data-min="60"> 60 mins </button>
+      </div>
+    </section>
 
-      <section class="in-time">
-        <h2> Time to clock in for lunch</h2>
-        <p class="time"> </p>
-      </section>
-      
-      <footer>
-        <p> Created by A. Chiang 2018 </p>
-      </footer>
-    </main>
-    <!-- <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="bundle.js" async></script>
-  </body>
+    <section class="in-time">
+      <h2> Time to clock in for lunch</h2>
+      <p class="time"> </p>
+    </section>
+
+    <footer>
+      <p> Created by A. Chiang 2018 </p>
+    </footer>
+  </main>
+  <!-- <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="bundle.js" async></script>
+</body>
+
 </html>
