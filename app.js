@@ -2,6 +2,7 @@
 import { MDCSelect } from '@material/select';
 import { MDCFloatingLabel } from '@material/floating-label';
 import { MDCRipple } from '@material/ripple';
+import flatpickr from 'flatpickr';
 import { addMinutes, format, parse, setHours, setMinutes, min } from 'date-fns';
 import { getTodaysDate, getCurrentTime } from './client/current-dateTime';
 
@@ -18,6 +19,14 @@ const STATE = {
 // DISPLAY CURRENT DATE & TIME
 getTodaysDate();
 setInterval(getCurrentTime, 1000);
+
+// FLATPICKR (Time Picker library)
+$(".flatpickr").flatpickr({
+  enableTime: true,
+  noCalendar: true,
+  dateFormat: "H:i",
+  time_24hr: true
+});
 
 // INSTANTIATE FOR MATERIAL COMPONENTS 
 // BUTTON RIPPLE EFFECT

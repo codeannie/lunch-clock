@@ -31,6 +31,7 @@
     "date-fns": "^1.29.0",
     "extract-loader": "^2.0.1",
     "file-loader": "^1.1.11",
+    "flatpickr": "^4.5.1",
     "jquery": "^3.3.1",
     "node-sass": "^4.9.2",
     "normalize.css": "^8.0.0",
