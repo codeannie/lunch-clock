@@ -5,15 +5,6 @@ import flatpickr from 'flatpickr';
 import { addMinutes, format } from 'date-fns';
 import { getTodaysDate, getCurrentTime } from './client/current-dateTime';
 
-const STATE = {
-  breakLength: '',
-  hour: '',
-  minute: '',
-  period: '',
-  timeOut: '',
-  timeIn: '',
-};
-
 // DISPLAY CURRENT DATE & TIME
 getTodaysDate();
 setInterval(getCurrentTime, 1000);
@@ -42,8 +33,18 @@ const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
 $('.mdc-button').on('click', e => {
   // alert('clicked!');
   const breakLength = $(e.currentTarget).data('min');
+
+  renderTimeIn(breakLength);
+
   console.log('date obj', new Date());
   console.log('button data min->', breakLength);
   console.log('time out', timePicker.selectedDates[0]);
   console.log('time out + mins', addMinutes(timePicker.selectedDates[0], breakLength));
 });
+
+function renderTimeIn(breakLength) {
+  const calculatedTimeIn = addMinutes(timePicker.selectedDates[0], breakLength);
+  const displayTime = format(calculatedTimeIn, 'hh:mm:ss A');
+
+  $('#timeIn').html(displayTime);
+}
