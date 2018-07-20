@@ -15,20 +15,24 @@
 </head>
 
 <body>
-  <main>
+  <div class="main-container">
     <h1> Lunch Clock </h1>
-    <section class="intro">
-      <p>Calculate what time to clock back in from lunch on the dot!</p>
-      <p>
-        <span class="bold"> Instructions: </span> Select length of lunch break & enter time clocked out</p>
+
+    <section class="instructions-container">
+      <h3>Instructions: </h3>
+      <ol>
+        <li>Enter the time clocked out.</li>
+        <li>Click the button that corresponds to the length of your lunch break.</li>
+        <li>Expected time to clock in from lunch is displayed.</li>
+      </ol>
     </section>
 
-    <section class="date_time-container">
+    <section class="currentTime-container">
       <div id="date"></div>
       <div id="clock"></div>
     </section>
 
-    <section class="time-out">
+    <section class="timeOut-container">
       <h2> What time did you clock out?</h2>
       <!-- <input id="flatpickr" type="text" placeholder="click to enter time" date-id="timePicker"> -->
       <div class="mdc-text-field mdc-text-field--box mdc-text-field--focused">
@@ -38,8 +42,8 @@
       </div>
     </section>
 
-    <section class="break-length">
-      <h2> How long is lunch? </h2>
+    <section class="breakLength-container">
+      <h2> How long is your lunch break? </h2>
       <div class="button-container">
         <button class="mdc-button mdc-button--outlined" data-min="30"> 30 mins </button>
         <button class="mdc-button mdc-button--outlined" data-min="45"> 45 mins </button>
@@ -48,14 +52,14 @@
     </section>
 
     <section class="in-time-container">
-      <h2> Time to clock in for lunch</h2>
-      <div id="timeIn"> </div>
+      <!-- <h2> Time to clock in for lunch</h2> -->
+      <!-- <div id="timeIn"> </div> -->
     </section>
 
     <footer>
-      <p> Created by A. Chiang 2018 </p>
+      <p> Disclaimer: not responsible for inaccuracies of time calculations</p>
     </footer>
-  </main>
+  </div>
   <!-- <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="bundle.js" async></script>
