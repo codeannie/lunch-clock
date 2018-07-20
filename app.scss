@@ -3,8 +3,34 @@
 @import "@material/button/mdc-button";
 @import "@material/floating-label/mdc-floating-label";
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #eeeeee;
+  // background-color: #eeeeee;
+  padding: 10px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // margin: auto 0;
+}
+
+section {
+  margin-top: 50px;
 }
 
 #clock {
@@ -12,6 +38,6 @@ body {
   font-size: 40px;
 }
 
-.mdc-select {
-  width: 150px;
+footer {
+  margin-top: 50px;
 }
