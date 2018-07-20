@@ -38,7 +38,11 @@ $('.mdc-button').on('click', e => {
 
 function renderTimeIn(breakLength) {
   const calculatedTimeIn = addMinutes(timePicker.selectedDates[0], breakLength);
-  const displayTime = format(calculatedTimeIn, 'hh:mm:ss A');
+  const displayTime = format(calculatedTimeIn, 'hh:mm A');
 
-  $('#timeIn').html(displayTime);
+  $('.inTime-container').empty();
+  $('.inTime-container').append(
+    `<h2> Time to clock in for Lunch </h2>
+    <div id="#timeIn"> ${displayTime} </div>`
+  );
 }
