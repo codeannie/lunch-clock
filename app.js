@@ -9,29 +9,23 @@ import { getTodaysDate, getCurrentTime } from './client/current-dateTime';
 getTodaysDate();
 setInterval(getCurrentTime, 1000);
 
+// TIME INPUT
 const timePicker = flatpickr('#flatpickr', {
   enableTime: true,
   noCalendar: true,
   dateFormat: 'H:i',
-  // time_24hr: true,
   minuteIncrement: 1,
   defaultHour: format(new Date(), 'HH'),
   defaultMinute: format(new Date(), 'mm'),
 });
 
-// INSTANTIATE FOR MATERIAL COMPONENTS
-// TEXT FIELD
+//  INSTANTIATE MATERIAL DESIGN COMPONENTS
 const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
-
-// BUTTON RIPPLE EFFECT
 const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
-
-// FLOATING LABEL EFFECT
 // const floatingLabel = new MDCFloatingLabel(document.querySelector('.mdc-floating-label'));
 
-// 30 MINUTES BREAK
+// SELECT BREAK LENGTH & RENDER TIME TO CLOCK IN
 $('.mdc-button').on('click', e => {
-  // alert('clicked!');
   const breakLength = $(e.currentTarget).data('min');
 
   renderTimeIn(breakLength);
