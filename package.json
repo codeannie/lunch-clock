@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "netlify": "npm install && npm run build",
     "bundle": "webpack --progress --colors --watch",
     "dev": "npm-run-all --parallel bundle",
     "start": "webpack-dev-server"
