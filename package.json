@@ -4,7 +4,7 @@
   "description": "calculate exact minute to clock back in from lunch",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack -p",
     "netlify": "npm install && npm run build",
     "bundle": "webpack --progress --colors --watch",
     "dev": "npm-run-all --parallel bundle",

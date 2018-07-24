@@ -1,11 +1,11 @@
-'use strict';
-
+const path = require('path');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: ['./app.scss', './app.js'],
   output: {
     filename: 'bundle.js',
+    path: path.resolve(__dirname, 'build'),
   },
   module: {
     rules: [
