@@ -1,5 +1,5 @@
 import { MDCTextField } from '@material/textfield';
-// import { MDCFloatingLabel } from '@material/floating-label';
+import { MDCFloatingLabel } from '@material/floating-label';
 import { MDCRipple } from '@material/ripple';
 import flatpickr from 'flatpickr';
 import { addMinutes, format } from 'date-fns';
@@ -8,10 +8,6 @@ import { getTodaysDate, getCurrentTime } from './client/current-dateTime';
 const STATE = {
   timeInput: '',
 };
-
-// DISPLAY CURRENT DATE & TIME
-getTodaysDate();
-setInterval(getCurrentTime, 1000);
 
 // TIME INPUT
 const timePicker = flatpickr('#flatpickr', {
@@ -28,16 +24,30 @@ const timePicker = flatpickr('#flatpickr', {
 //  INSTANTIATE MATERIAL DESIGN COMPONENTS
 const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
 const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
-// const floatingLabel = new MDCFloatingLabel(document.querySelector('.mdc-floating-label'));
+const floatingLabel = new MDCFloatingLabel(document.querySelector('.mdc-floating-label'));
+
+// OK BUTTON - move to next screen
+$('.timePickr-btn').on('click', () => {
+  // $('.timeOut-container').hide();
+  alert('click!');
+  console.log('empty input?->', timePicker.selectedDates[0]);
+  console.log('dateStr event?', timePicker.dateStr);
+  // if (timePicker.selectedDates[0] === []) {
+  //   alert('no time entered!');
+  // } else {
+
+  // }
+  $('.breakLength-container').show();
+});
 
 // SELECT BREAK LENGTH & RENDER TIME TO CLOCK IN
-$('.mdc-button').on('click', e => {
+$('.break-btn').on('click', e => {
   const breakLength = $(e.currentTarget).data('min');
   $('.inTime-container').empty();
 
   renderTimeIn(breakLength);
 
-  console.log('STATE ->', STATE.timeInput);
+  // console.log('STATE ->', STATE.timeInput);
   // console.log('date obj', new Date());
   // console.log('button data min->', breakLength);
   // console.log('time out', timePicker.selectedDates[0]);
@@ -53,3 +63,15 @@ function renderTimeIn(breakLength) {
     <div id="#timeIn"> ${displayTime} </div>`
   );
 }
+
+$(document).ready(() => {
+  // HIDE ON LOAD
+  $('.instructions-container').hide();
+  // $('.error-container').hide();
+  $('.breakLength-container').hide();
+
+  // DISPLAY CURRENT DATE & TIME
+  getTodaysDate();
+  getCurrentTime();
+  setInterval(getCurrentTime, 1000);
+});
