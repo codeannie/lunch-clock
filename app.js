@@ -29,24 +29,30 @@ const floatingLabel = new MDCFloatingLabel(document.querySelector('.mdc-floating
 // OK BUTTON - move to next screen
 $('.timePickr-btn').on('click', () => {
   // $('.timeOut-container').hide();
-  alert('click!');
-  console.log('empty input?->', timePicker.selectedDates[0]);
-  console.log('dateStr event?', timePicker.dateStr);
-  // if (timePicker.selectedDates[0] === []) {
-  //   alert('no time entered!');
-  // } else {
-
-  // }
-  $('.breakLength-container').show();
+  if (timePicker.selectedDates[0] === undefined) {
+    renderErrorMsg();
+  } else {
+    $('.err-msg').hide();
+    $('.breakLength-container').empty();
+    renderBreakBtns();
+  }
 });
+
+function renderErrorMsg() {
+  $('.timeOut-container').append(
+    `<div class="err-msg"> <p> Please enter a time </p>
+    </div>`
+  );
+}
 
 // SELECT BREAK LENGTH & RENDER TIME TO CLOCK IN
 $('.break-btn').on('click', e => {
   const breakLength = $(e.currentTarget).data('min');
   $('.inTime-container').empty();
-
   renderTimeIn(breakLength);
 
+  // console.log('empty input?->', timePicker.selectedDates[0]);
+  // console.log('dateStr event?', timePicker.dateStr);
   // console.log('STATE ->', STATE.timeInput);
   // console.log('date obj', new Date());
   // console.log('button data min->', breakLength);
@@ -64,11 +70,22 @@ function renderTimeIn(breakLength) {
   );
 }
 
+function renderBreakBtns() {
+  $('.breakLength-container').append(
+    `<h2> How long is your lunch break?
+    <div class="button-container">
+    <button class="mdc-button mdc-button--outlined break-btn" data-min="30"> 30 mins </button>
+    <button class="mdc-button mdc-button--outlined break-btn" data-min="45"> 45 mins </button>
+    <button class="mdc-button mdc-button--outlined break-btn" data-min="60"> 60 mins </button>
+    </div>`
+  );
+}
+
 $(document).ready(() => {
   // HIDE ON LOAD
   $('.instructions-container').hide();
-  // $('.error-container').hide();
-  $('.breakLength-container').hide();
+  $('.error-container').hide();
+  // $('.breakLength-container').hide();
 
   // DISPLAY CURRENT DATE & TIME
   getTodaysDate();
