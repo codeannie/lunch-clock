@@ -33,8 +33,8 @@ $('.timePickr-btn').on('click', () => {
     renderErrorMsg();
   } else {
     $('.err-msg').hide();
-    $('.breakLength-container').empty();
-    renderBreakBtns();
+    $('.breakLength-container').show();
+    // renderBreakBtns();
   }
 });
 
@@ -85,7 +85,7 @@ $(document).ready(() => {
   // HIDE ON LOAD
   $('.instructions-container').hide();
   $('.error-container').hide();
-  // $('.breakLength-container').hide();
+  $('.breakLength-container').hide();
 
   // DISPLAY CURRENT DATE & TIME
   getTodaysDate();

@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="/client/css/flatpickr-themes/material_blue.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
   <!-- <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"> -->
-  <link rel="stylesheet" href="bundle.css">
+  <link rel="stylesheet" href="build/bundle.css">
 </head>
 
 <body>
@@ -45,7 +45,14 @@
       <button class="mdc-button mdc-button--outlined timePickr-btn"> OK </button>
     </section>
 
-    <section class="breakLength-container"></section>
+    <section class="breakLength-container">
+      <h2> How long is your lunch break?
+        <div class="button-container">
+          <button class="mdc-button mdc-button--outlined break-btn" data-min="30"> 30 mins </button>
+          <button class="mdc-button mdc-button--outlined break-btn" data-min="45"> 45 mins </button>
+          <button class="mdc-button mdc-button--outlined break-btn" data-min="60"> 60 mins </button>
+        </div>
+    </section>
 
     <section class="inTime-container"></section>
 
@@ -55,7 +62,7 @@
   </div>
   <!-- <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="bundle.js" async></script>
+  <script src="build/bundle.js" async></script>
 </body>
 
 </html>
