@@ -83,7 +83,7 @@ function renderBreakBtns() {
 
 $(document).ready(() => {
   // HIDE ON LOAD
-  $('.instructions-container').hide();
+  // $('.instructions-container').hide();
   $('.error-container').hide();
   $('.breakLength-container').hide();
 
