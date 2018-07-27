@@ -65,10 +65,9 @@ function renderTimeIn(breakLength) {
   const calculatedTimeIn = addMinutes(timePicker.selectedDates[0], breakLength);
   const displayTime = format(calculatedTimeIn, 'hh:mm A');
 
-  $('.inTime-container').append(
-    `<h2> Clock in from lunch at </h2>
-    <div id="timeIn"> ${displayTime} </div>`
-  );
+  $('.inTime-container').append(`
+  <h3> For <span id="length">${breakLength}</span> min lunch, clock in at </h3>
+  <p id="timeIn">${displayTime}</p>`);
 }
 
 function renderBreakBtns() {
