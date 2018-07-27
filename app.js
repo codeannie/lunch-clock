@@ -30,6 +30,7 @@ const floatingLabel = new MDCFloatingLabel(document.querySelector('.mdc-floating
 $('.timePickr-btn').on('click', () => {
   // $('.timeOut-container').hide();
   if (timePicker.selectedDates[0] === undefined) {
+    $('.err-msg').empty();
     renderErrorMsg();
   } else {
     $('.err-msg').hide();
@@ -40,7 +41,7 @@ $('.timePickr-btn').on('click', () => {
 
 function renderErrorMsg() {
   $('.timeOut-container').append(
-    `<div class="err-msg"> <p> Please enter a time </p>
+    `<div class="err-msg"><p> Please enter a time.</p>
     </div>`
   );
 }
@@ -65,7 +66,7 @@ function renderTimeIn(breakLength) {
   const displayTime = format(calculatedTimeIn, 'hh:mm A');
 
   $('.inTime-container').append(
-    `<h2> Time to clock in for Lunch </h2>
+    `<h2> Clock in from lunch at </h2>
     <div id="timeIn"> ${displayTime} </div>`
   );
 }
