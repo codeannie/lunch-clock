@@ -66,7 +66,7 @@ function renderTimeIn(breakLength) {
 
   $('.inTime-container').append(
     `<h2> Time to clock in for Lunch </h2>
-    <div id="#timeIn"> ${displayTime} </div>`
+    <div id="timeIn"> ${displayTime} </div>`
   );
 }
 
