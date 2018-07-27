@@ -40,12 +40,37 @@ body {
 }
 
 section {
-  margin-top: 50px;
+  margin: 10px;
+}
+
+#date {
+  text-align: center;
 }
 
 #clock {
-  font-family: "Nunito", sans-serif;
-  font-size: 40px;
+  // font-family: "Nunito", sans-serif;
+  font-size: 35px;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 5%;
+}
+
+h2 {
+  margin: 10px;
+  padding: 10px;
+}
+
+.button-container {
+  margin-top: 5px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+#timeIn {
+  font-size: 25px;
+  text-align: center;
 }
 
 footer {
