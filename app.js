@@ -28,14 +28,12 @@ const floatingLabel = new MDCFloatingLabel(document.querySelector('.mdc-floating
 
 // OK BUTTON - move to next screen
 $('.timePickr-btn').on('click', () => {
-  // $('.timeOut-container').hide();
   if (timePicker.selectedDates[0] === undefined) {
     $('.err-msg').empty();
     renderErrorMsg();
   } else {
     $('.err-msg').hide();
     $('.breakLength-container').show();
-    // renderBreakBtns();
   }
 });
 
@@ -51,14 +49,6 @@ $('.break-btn').on('click', e => {
   const breakLength = $(e.currentTarget).data('min');
   $('.inTime-container').empty();
   renderTimeIn(breakLength);
-
-  // console.log('empty input?->', timePicker.selectedDates[0]);
-  // console.log('dateStr event?', timePicker.dateStr);
-  // console.log('STATE ->', STATE.timeInput);
-  // console.log('date obj', new Date());
-  // console.log('button data min->', breakLength);
-  // console.log('time out', timePicker.selectedDates[0]);
-  // console.log('time out + mins', addMinutes(timePicker.selectedDates[0], breakLength));
 });
 
 function renderTimeIn(breakLength) {
@@ -83,7 +73,6 @@ function renderBreakBtns() {
 
 $(document).ready(() => {
   // HIDE ON LOAD
-  // $('.instructions-container').hide();
   $('.error-container').hide();
   $('.breakLength-container').hide();
 
